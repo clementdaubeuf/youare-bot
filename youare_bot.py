@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 import random
+from random import randint
 import os
 from dotenv import load_dotenv
 from unidecode import unidecode
@@ -53,7 +54,7 @@ async def on_message(message):
     if message.author == bot.user:
         return
 
-    if random.random() <= 0.0001:
+    if randint(1, 100) == 1:
         await message.channel.send(generate_message())
 
 # don't forget to add your bot token in the .env file
