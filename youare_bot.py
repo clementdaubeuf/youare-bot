@@ -54,7 +54,7 @@ async def on_message(message):
     if message.author == bot.user:
         return
 
-    if randint(1, 100) == 1:
+    if randint(1, 1000) == 1:
         await message.channel.send(generate_message())
 
 # don't forget to add your bot token in the .env file
